@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.5fr;
     min-height: calc(100vh - 8rem);
     max-width: 1400px;
     margin: 0 auto;
