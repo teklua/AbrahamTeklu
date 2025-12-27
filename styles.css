@@ -6,7 +6,7 @@
 }
 
 :root {
-    --yellow-ochre: #D4A574;
+    --yellow-ochre: #ffe792;
     --light-beige: #F5F1E8;
     --light-grey: #E8E8E8;
     --dark-text: #2C2C2C;
@@ -22,7 +22,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Didot', 'Bodoni MT', 'Bodoni 72', serif;
     font-weight: 700;
     color: var(--dark-text);
 }
