@@ -51,19 +51,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle contact form submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("jXjS42skU6A-NHku2");
+        })();
+        
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form data
             const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
+            const submitButton = contactForm.querySelector('.submit-button');
+            const originalButtonText = submitButton.textContent;
             
-            // Here you would typically send the data to a server
-            // For now, we'll just show an alert
-            alert('Thank you for your message! I will get back to you soon.');
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
             
-            // Reset form
-            contactForm.reset();
+            // Send email using EmailJS
+            emailjs.sendForm('service_dj6gmdd', 'template_4hoiz2c', contactForm)
+                .then(function() {
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset();
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                }, function(error) {
+                    alert('Sorry, there was an error sending your message. Please try again or email me directly at amthagos@gmail.com');
+                    console.error('EmailJS error:', error);
+                    submitButton.disabled = false;
+                    submitButton.textContent = originalButtonText;
+                });
         });
     }
 });
