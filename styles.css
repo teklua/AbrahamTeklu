@@ -182,6 +182,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--white);
 }
 
+.profile-link.linkedin img {
+    width: auto;
+    height: 100%;
+    object-fit: none;
+    object-position: center;
+}
+
 /* Featured Projects Section */
 .featured-projects {
     background-color: var(--light-beige);
