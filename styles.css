@@ -190,24 +190,28 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 4rem;
-    position: relative;
-    padding-bottom: 1rem;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.projects-title::after {
-    content: '';
+.headline-underline {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.25em;
+}
+
+.headline-underline::after {
+    content: "";
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
-    height: 8px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M2,4 Q10,2 20,4 Q30,6 40,3.5 Q50,1 60,4 Q70,7 80,3.5 Q90,0 98,4' stroke='%232C2C2C' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M5,5 Q15,3 25,5 Q35,7 45,4.5 Q55,2 65,5 Q75,8 85,4.5 Q95,1 98,5' stroke='%232C2C2C' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.7'/%3E%3Cpath d='M0,3.5 Q12,1.5 22,3.5 Q32,5.5 42,3 Q52,0.5 62,3.5 Q72,6.5 82,3 Q92,-0.5 100,3.5' stroke='%232C2C2C' stroke-width='2' fill='none' stroke-linecap='round' opacity='0.6'/%3E%3C/svg%3E");
+    bottom: 0.05em;
+    height: 0.4em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 12' preserveAspectRatio='none'%3E%3Cpath d='M2,6 Q8,4 15,6 Q22,8 28,5.5 Q35,3 42,6 Q48,9 55,5.5 Q62,2 68,6 Q75,10 82,5.5 Q88,1 95,6 Q98,7 100,6' stroke='%232C2C2C' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M0,7 Q10,5 18,7 Q26,9 32,6.5 Q38,4 45,7 Q52,10 58,6.5 Q65,3 72,7 Q78,11 85,6.5 Q92,2 98,7' stroke='%232C2C2C' stroke-width='2' fill='none' stroke-linecap='round' opacity='0.75'/%3E%3Cpath d='M3,5.5 Q12,3.5 20,5.5 Q28,7.5 35,5 Q42,2.5 50,5.5 Q57,8.5 65,5 Q72,1.5 80,5.5 Q87,9.5 95,5 Q98,4.5 100,5.5' stroke='%232C2C2C' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.65'/%3E%3Cpath d='M5,8 Q15,6 23,8 Q31,10 38,7.5 Q45,5 52,8 Q59,11 66,7.5 Q73,4 80,8 Q87,12 95,7.5 Q98,7 100,8' stroke='%232C2C2C' stroke-width='1.5' fill='none' stroke-linecap='round' opacity='0.5'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: center;
     background-size: 100% 100%;
+    pointer-events: none;
 }
 
 .projects-title.visible {
