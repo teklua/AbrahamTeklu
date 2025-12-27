@@ -1,12 +1,4 @@
 /* Reset and Base Styles */
-@font-face {
-    font-family: 'Special Gothic Expanded One';
-    src: url('fonts/SpecialGothicExpandedOne-Regular.woff2') format('woff2'),
-         url('fonts/SpecialGothicExpandedOne-Regular.woff') format('woff'),
-         url('fonts/SpecialGothicExpandedOne-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 * {
     margin: 0;
@@ -31,9 +23,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Special Gothic Expanded One', sans-serif;
-    font-weight: normal;
+    font-family: 'Special Gothic Expanded One', 'Oswald', sans-serif;
+    font-weight: 400;
     color: var(--dark-text);
+    letter-spacing: 0.05em;
 }
 
 /* Navigation */
@@ -203,7 +196,9 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
     text-decoration: underline;
-    text-underline-offset: 0.2em;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.15em;
+    text-decoration-color: var(--dark-text);
 }
 
 .projects-title.visible {
