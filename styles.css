@@ -49,10 +49,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-name {
+    font-family: 'Special Gothic Expanded One', 'Oswald', sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--white);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.05em;
 }
 
 .nav-links {
@@ -61,11 +63,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link {
+    font-family: 'Special Gothic Expanded One', 'Oswald', sans-serif;
     font-size: 1rem;
+    font-weight: 400;
     color: var(--white);
     text-decoration: none;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s ease;
+    letter-spacing: 0.05em;
 }
 
 .nav-link:hover {
