@@ -201,14 +201,13 @@ h1, h2, h3, h4, h5, h6 {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 280px;
-    height: 6px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 6'%3E%3Cpath d='M5,3 Q25,1 45,3 Q65,5 85,2.5 Q105,0 125,3 Q145,6 165,2.5 Q185,-1 205,3 Q225,7 245,2.5 Q265,-2 275,3' stroke='%232C2C2C' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    left: 0;
+    right: 0;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M2,4 Q10,2 20,4 Q30,6 40,3.5 Q50,1 60,4 Q70,7 80,3.5 Q90,0 98,4' stroke='%232C2C2C' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M5,5 Q15,3 25,5 Q35,7 45,4.5 Q55,2 65,5 Q75,8 85,4.5 Q95,1 98,5' stroke='%232C2C2C' stroke-width='1.8' fill='none' stroke-linecap='round' opacity='0.7'/%3E%3Cpath d='M0,3.5 Q12,1.5 22,3.5 Q32,5.5 42,3 Q52,0.5 62,3.5 Q72,6.5 82,3 Q92,-0.5 100,3.5' stroke='%232C2C2C' stroke-width='2' fill='none' stroke-linecap='round' opacity='0.6'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 100% 100%;
 }
 
 .projects-title.visible {
