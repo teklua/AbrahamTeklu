@@ -1,4 +1,13 @@
 /* Reset and Base Styles */
+@font-face {
+    font-family: 'Special Gothic Expanded One';
+    src: url('fonts/SpecialGothicExpandedOne-Regular.woff2') format('woff2'),
+         url('fonts/SpecialGothicExpandedOne-Regular.woff') format('woff'),
+         url('fonts/SpecialGothicExpandedOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,8 +31,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bodoni Moda', 'Didot', 'Bodoni MT', 'Bodoni 72', 'Didot LT STD', 'Hoefler Text', serif;
-    font-weight: 700;
+    font-family: 'Special Gothic Expanded One', sans-serif;
+    font-weight: normal;
     color: var(--dark-text);
 }
 
