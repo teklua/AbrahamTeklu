@@ -496,6 +496,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .resume-container {
@@ -529,6 +531,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
     width: 90%;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .resume-pdf-preview {
@@ -557,6 +560,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     border: none;
     pointer-events: none;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .resume-pdf-overlay {
@@ -855,33 +860,46 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .resume-section {
-        padding: 4rem 1rem;
+        padding: 4rem 0.5rem;
         width: 100%;
         min-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .resume-container {
         max-width: 100%;
         width: 100%;
         padding: 0;
+        box-sizing: border-box;
+    }
+
+    .resume-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     .resume-pdf-link {
         max-width: 100%;
-        width: 100%;
-        margin-top: 2rem;
-        padding: 0 0.5rem;
+        width: calc(100% - 1rem);
+        margin: 2rem auto 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: block;
     }
 
     .resume-pdf-preview {
         padding-bottom: 140%; /* Slightly taller for mobile */
         width: 100%;
         max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
     }
 
     .resume-pdf-iframe {
         width: 100%;
         height: 100%;
+        max-width: 100%;
     }
 
     .resume-download-text {
