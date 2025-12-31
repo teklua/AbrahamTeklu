@@ -499,7 +499,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .resume-container {
-    max-width: 800px;
+    max-width: 1200px;
+    width: 100%;
     text-align: center;
 }
 
@@ -517,6 +518,74 @@ h1, h2, h3, h4, h5, h6 {
 .resume-note {
     font-size: 1rem;
     color: var(--dark-grey);
+}
+
+.resume-pdf-link {
+    display: block;
+    text-decoration: none;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.resume-pdf-preview {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 129.4%; /* Standard US Letter aspect ratio (8.5/11) */
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-pdf-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.resume-pdf-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+}
+
+.resume-pdf-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+}
+
+.resume-pdf-preview:hover .resume-pdf-overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.resume-download-text {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.resume-pdf-preview:hover .resume-download-text {
+    opacity: 1;
 }
 
 /* Footer */
@@ -781,6 +850,19 @@ h1, h2, h3, h4, h5, h6 {
 
     .contact-left {
         padding: 2rem;
+    }
+
+    .resume-pdf-link {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    .resume-pdf-preview {
+        padding-bottom: 140%; /* Slightly taller for mobile */
+    }
+
+    .resume-download-text {
+        font-size: 1.2rem;
     }
 
     .contact-title {
