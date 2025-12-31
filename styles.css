@@ -86,6 +86,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     position: relative;
     min-height: 100vh;
+    min-width: 660px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,6 +311,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact Section */
 .contact-section {
     min-height: 100vh;
+    min-width: 660px;
     background-color: var(--yellow-ochre);
     padding: 8rem 0 0;
 }
@@ -506,6 +508,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer {
+    min-width: 660px;
     background-color: var(--yellow-ochre);
     padding: 3rem;
     text-align: left;
@@ -569,7 +572,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero-image-container {
         width: 100%;
-        min-width: 100%;
+        min-width: 660px;
         height: 100vh;
     }
 
@@ -580,6 +583,10 @@ h1, h2, h3, h4, h5, h6 {
         height: 100%;
         object-fit: cover;
         object-position: center;
+    }
+
+    .hero {
+        min-width: 660px;
     }
 }
 
@@ -602,6 +609,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero-image-container {
         width: 100%;
+        min-width: 660px;
         height: 100vh;
     }
 
@@ -611,6 +619,15 @@ h1, h2, h3, h4, h5, h6 {
         height: 100%;
         object-fit: cover;
         object-position: center;
+    }
+
+    .hero {
+        min-width: 660px;
+    }
+
+    .contact-section,
+    .footer {
+        min-width: 660px;
     }
 
     .hero-name {
