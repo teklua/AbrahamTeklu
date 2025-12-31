@@ -568,27 +568,29 @@ h1, h2, h3, h4, h5, h6 {
     .profile-links {
         position: absolute;
         top: 6rem;
-        left: 1.5rem;
-        right: 1.5rem;
+        left: 1rem;
+        right: 1rem;
         flex-direction: row;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 0.5rem;
+        flex-wrap: wrap;
     }
 
     .profile-link {
-        width: 150px;
-        height: 50px;
+        width: 120px;
+        height: 45px;
+        flex-shrink: 0;
     }
 
     .hero-image-container {
         width: 100%;
-        min-width: 720px;
+        min-width: 100%;
         height: 100vh;
     }
 
     .hero-image {
         width: 100%;
-        min-width: 720px;
+        min-width: 100%;
         max-width: 100%;
         height: 100%;
         object-fit: cover;
@@ -596,7 +598,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero {
-        min-width: 720px;
+        min-width: 100%;
+        width: 100%;
     }
 }
 
@@ -609,7 +612,23 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .navbar {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .nav-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-links {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
     }
 
     .nav-name {
@@ -626,20 +645,31 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero-image-container {
         width: 100%;
-        min-width: 720px;
+        min-width: 100%;
         height: 100vh;
     }
 
     .hero-image {
         width: 100%;
-        min-width: 720px;
+        min-width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
     }
 
     .hero {
-        min-width: 720px;
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .nav-container {
+        width: 100%;
+        padding: 0 1rem;
     }
 
     .contact-section,
