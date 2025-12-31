@@ -95,6 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     width: 100%;
     height: 100vh;
+    min-height: 600px;
     overflow: hidden;
 }
 
@@ -555,6 +556,24 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: row;
         justify-content: center;
         margin-top: 2rem;
+        left: auto;
+        top: auto;
+    }
+
+    .hero-image-container {
+        height: auto;
+        min-height: 500px;
+        aspect-ratio: 16 / 9;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
@@ -576,14 +595,19 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-image-container {
-        height: 100vh;
+        height: 70vh;
         min-height: 500px;
+        max-height: 800px;
     }
 
     .hero-image {
         min-height: 500px;
         object-fit: cover;
         object-position: center;
+    }
+
+    .hero {
+        min-height: auto;
     }
 
     .hero-name {
