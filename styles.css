@@ -508,7 +508,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer {
-    min-width: 680px;
+    /* min-width: 680px; */
+    width: 100%;
     background-color: var(--yellow-ochre);
     padding: 3rem;
     text-align: left;
