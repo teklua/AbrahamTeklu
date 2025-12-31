@@ -243,8 +243,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-image-container {
-    width: 700px;
-    height: 400px;
+    width: 660px;
+    height: 440px;
     overflow: hidden;
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
