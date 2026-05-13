@@ -293,8 +293,76 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.05);
 }
 
+/* Jazz interest: favor upper part of photo so faces stay in frame under object-fit: cover */
+.interest-jazz-image {
+    object-position: center 18%;
+}
+
 .project-image-link:hover {
     cursor: pointer;
+}
+
+/* Horizontal scroll gallery (e.g. multiple coffee photos) */
+.project-image-scroll-container {
+    overflow: hidden;
+}
+
+.project-image-scroll {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    direction: ltr;
+}
+
+.project-image-scroll-slide {
+    flex: 0 0 calc(100% - 0.25rem);
+    min-width: calc(100% - 0.25rem);
+    height: 100%;
+    scroll-snap-align: start;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.project-image-scroll-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.project-image-scroll-slide:hover .project-image-scroll-img {
+    transform: scale(1.03);
+}
+
+/* Art interests: taller frame and show full pieces without hard cropping */
+.project-image-container.project-image-container--art {
+    padding-bottom: 108%;
+}
+
+.project-image-container--art .project-image-scroll-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(44, 44, 44, 0.07);
+}
+
+.project-image-container--art .project-image-scroll-img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.project-image-container--art .project-image-scroll-slide:hover .project-image-scroll-img {
+    transform: none;
 }
 
 .project-content {
@@ -482,32 +550,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 4px;
 }
 
-/* Interests Section */
-.interests-section {
-    min-height: 100vh;
-    width: 100%;
-    background-color: var(--yellow-ochre);
-    padding: 8rem 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.interests-container {
-    max-width: 800px;
-    text-align: center;
-}
-
-.interests-title {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-.interests-placeholder {
-    font-size: 1.2rem;
-    color: var(--dark-grey);
-}
-
 /* Resume Section */
 .resume-section {
     min-height: 100vh;
@@ -616,6 +658,15 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
+/* Interests page: same background as footer */
+.page-interests {
+    background-color: var(--yellow-ochre);
+}
+
+.page-interests .featured-projects {
+    background-color: var(--yellow-ochre);
+}
+
 /* Footer */
 .footer {
     /* min-width: 680px; */
@@ -718,8 +769,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-    .resume-section,
-    .interests-section {
+    .resume-section {
         width: 100%;
         min-width: 100%;
         padding: 4rem 1.5rem;

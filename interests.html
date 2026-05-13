@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700&family=Oswald:wght@400;500;600;700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-interests">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -23,11 +23,78 @@
         </div>
     </nav>
 
-    <!-- Interests Section -->
-    <section class="interests-section">
-        <div class="interests-container">
-            <h1 class="interests-title">Interests</h1>
-            <p class="interests-placeholder">Content coming soon...</p>
+    <!-- Interests cards (same layout as featured projects on home) -->
+    <section class="featured-projects">
+        <div class="projects-container">
+            <h2 class="projects-title fade-in">Interests</h2>
+
+            <div class="project-card fade-in">
+                <div class="project-image-container project-image-scroll-container">
+                    <div class="project-image-scroll" aria-label="Coffee photos">
+                        <div class="project-image-scroll-slide">
+                            <img src="images/interest-coffee1.png" alt="Coffee" class="project-image-scroll-img">
+                        </div>
+                        <div class="project-image-scroll-slide">
+                            <img src="images/interest-coffee2.png" alt="Coffee" class="project-image-scroll-img">
+                        </div>
+                        <div class="project-image-scroll-slide">
+                            <img src="images/interest-coffee3.jpg" alt="Coffee" class="project-image-scroll-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Coffee</h3>
+                    <p class="project-description">
+                        I got into specialty coffee 5 years ago. Originally, I just wanted better morning coffee and the most effective and easiest way to improve your coffee is to grind your own beans. So I got a grinder and started making pour overs. I did not think that 5 years later I would be preparing specialty water, choosing different grinder geometries based on the coffee, notating every brew in detail, and competing against actual specialty baristas. It has been a minor obsession and a lot of fun! Check out my <a href="https://abrahamteklu.substack.com/" class="project-link">Substack</a> for coffee shop reviews  and my <a href="https://www.instagram.com/nowehavecafeathome/" class="project-link">Instagram</a> for new coffee reciepies.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image-container">
+                    <img src="images/chess.jpeg" alt="Chess" class="project-image">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Chess</h3>
+                    <p class="project-description">
+                        I was twenty when I started playing chess. I got hooked quickly and spent a lot of time online, learning just enough to stop losing every game right away. I still play, I am still not very good at it, and I still enjoy it.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image-container">
+                    <img src="images/interest-jazz.jpeg" alt="Jazz" class="project-image interest-jazz-image">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Jazz</h3>
+                    <p class="project-description">
+                        I listen to a lot of jazz and play piano when I get the chance. At the physics music festival my roommates and I played “Take Five,” and since I got the short stick I had to play bass, but it I've learned to like bass.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image-container project-image-scroll-container project-image-container--art">
+                    <div class="project-image-scroll" aria-label="Art photos">
+                        <div class="project-image-scroll-slide">
+                            <img src="images/interest_art1.jpeg" alt="Art" class="project-image-scroll-img">
+                        </div>
+                        <div class="project-image-scroll-slide">
+                            <img src="images/interest_art2.jpeg" alt="Art" class="project-image-scroll-img">
+                        </div>
+                        <div class="project-image-scroll-slide">
+                            <img src="images/interest_art3.jpeg" alt="Art" class="project-image-scroll-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Graphic Design and Painting</h3>
+                    <p class="project-description">
+                        Graphic design and spray paint have been in the background for me since high school, two outlets I still enjoy when life leaves room. I wish I did them more often than I actually do.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -42,4 +109,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
