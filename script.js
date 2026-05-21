@@ -33,6 +33,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Image carousels with prev/next arrows
+    document.querySelectorAll('[data-image-carousel]').forEach(function(carousel) {
+        const track = carousel.querySelector('.project-image-carousel-track');
+        const prevBtn = carousel.querySelector('.project-image-carousel-arrow--prev');
+        const nextBtn = carousel.querySelector('.project-image-carousel-arrow--next');
+        if (!track || !prevBtn || !nextBtn) return;
+
+        function updateButtons() {
+            const maxScroll = track.scrollWidth - track.clientWidth;
+            prevBtn.disabled = track.scrollLeft <= 1;
+            nextBtn.disabled = track.scrollLeft >= maxScroll - 1;
+        }
+
+        function scrollToSlide(direction) {
+            const slide = track.querySelector('.project-image-scroll-slide');
+            const gap = parseFloat(getComputedStyle(track).gap) || 0;
+            const amount = slide ? slide.offsetWidth + gap : track.clientWidth;
+            track.scrollBy({ left: direction * amount, behavior: 'smooth' });
+        }
+
+        prevBtn.addEventListener('click', function() {
+            scrollToSlide(-1);
+        });
+
+        nextBtn.addEventListener('click', function() {
+            scrollToSlide(1);
+        });
+
+        track.addEventListener('scroll', updateButtons, { passive: true });
+        window.addEventListener('resize', updateButtons);
+        updateButtons();
+    });
+
     // Initial check on page load
     handleScrollAnimations();
 

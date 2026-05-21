@@ -17,6 +17,7 @@
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="resume.html" class="nav-link">Resume</a>
+                <a href="publications.html" class="nav-link">Publications</a>
                 <a href="interests.html" class="nav-link active">Interests</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
@@ -29,8 +30,9 @@
             <h2 class="projects-title fade-in">Interests</h2>
 
             <div class="project-card fade-in">
-                <div class="project-image-container project-image-scroll-container">
-                    <div class="project-image-scroll" aria-label="Coffee photos">
+                <div class="project-image-container project-image-scroll-container" data-image-carousel>
+                    <button type="button" class="project-image-carousel-arrow project-image-carousel-arrow--prev" aria-label="Previous image">&lsaquo;</button>
+                    <div class="project-image-scroll project-image-carousel-track" aria-label="Coffee photos">
                         <div class="project-image-scroll-slide">
                             <img src="images/interest-coffee1.png" alt="Coffee" class="project-image-scroll-img">
                         </div>
@@ -41,6 +43,7 @@
                             <img src="images/interest-coffee3.jpg" alt="Coffee" class="project-image-scroll-img">
                         </div>
                     </div>
+                    <button type="button" class="project-image-carousel-arrow project-image-carousel-arrow--next" aria-label="Next image">&rsaquo;</button>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Coffee</h3>
@@ -75,8 +78,9 @@
             </div>
 
             <div class="project-card fade-in">
-                <div class="project-image-container project-image-scroll-container project-image-container--art">
-                    <div class="project-image-scroll" aria-label="Art photos">
+                <div class="project-image-container project-image-scroll-container project-image-container--art" data-image-carousel>
+                    <button type="button" class="project-image-carousel-arrow project-image-carousel-arrow--prev" aria-label="Previous image">&lsaquo;</button>
+                    <div class="project-image-scroll project-image-carousel-track" aria-label="Art photos">
                         <div class="project-image-scroll-slide">
                             <img src="images/interest_art1.jpeg" alt="Art" class="project-image-scroll-img">
                         </div>
@@ -87,6 +91,7 @@
                             <img src="images/interest_art3.jpeg" alt="Art" class="project-image-scroll-img">
                         </div>
                     </div>
+                    <button type="button" class="project-image-carousel-arrow project-image-carousel-arrow--next" aria-label="Next image">&rsaquo;</button>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Graphic Design and Painting</h3>
