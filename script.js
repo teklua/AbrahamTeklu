@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
         );
     }
 
+    function updateScrollHint() {
+        const hint = document.querySelector('.scroll-hint');
+        if (!hint) return;
+
+        const scrollableDistance = document.documentElement.scrollHeight - window.innerHeight;
+        const atBottom = window.scrollY >= scrollableDistance - 24;
+
+        hint.classList.toggle('is-hidden', atBottom || scrollableDistance <= 0);
+    }
+
     // Function to handle scroll animations
     function handleScrollAnimations() {
         // Animate projects title
@@ -68,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial check on page load
     handleScrollAnimations();
+    updateScrollHint();
 
     // Throttle scroll events for better performance
     let ticking = false;
@@ -75,11 +86,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!ticking) {
             window.requestAnimationFrame(function() {
                 handleScrollAnimations();
+                updateScrollHint();
                 ticking = false;
             });
             ticking = true;
         }
     });
+
+    window.addEventListener('resize', updateScrollHint);
 
     // Handle contact form submission
     const contactForm = document.getElementById('contactForm');

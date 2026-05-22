@@ -1103,3 +1103,32 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0);
 }
 
+/* Scroll-down hint arrow */
+@keyframes scroll-hint-bounce {
+    0%, 100% { transform: rotate(90deg) translateX(0); }
+    50% { transform: rotate(90deg) translateX(6px); }
+}
+
+.scroll-hint {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 500;
+    color: #000;
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.scroll-hint.is-hidden {
+    opacity: 0;
+}
+
+.scroll-hint__arrow {
+    display: block;
+    font-size: 5rem;
+    line-height: 1;
+    animation: scroll-hint-bounce 1.6s ease-in-out infinite;
+}
+
